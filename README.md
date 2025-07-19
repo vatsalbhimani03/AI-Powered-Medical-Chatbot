@@ -91,7 +91,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📦 Manual Package Installation (if not using `requirements.txt`)
+## 📦 Manual Package Installation 
 
 ```bash
 pipenv install gradio
