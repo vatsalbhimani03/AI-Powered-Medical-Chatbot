@@ -20,6 +20,28 @@ which python3  #/opt/homebrew/bin/python3
 /opt/homebrew/bin/python3 --version  #Python 3.13.x
 
 
+### Using `pip` and `venv`
+#### Create a Virtual Environment:
+```
+python -m venv venv
+```
+
+#### Activate the Virtual Environment:
+**macOS/Linux:**
+```
+source venv/bin/activate
+```
+
+**Windows:**
+```
+venv\Scripts\activate
+```
+
+#### Install Dependencies:
+```
+pip install -r requirements.txt
+```
+
 
 
 
