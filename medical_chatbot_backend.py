@@ -15,7 +15,6 @@ from elevenlabs.client import ElevenLabs
 from dotenv import load_dotenv
 
 
-
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~STEP 1 (Patient's input - Voice & Image)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # fetching Groq & ElevenLabs api key (Load keys from .env)
@@ -28,7 +27,7 @@ def image_to_base64(path):
     with open(path, "rb") as img:  #rb - read binary format
         return base64.b64encode(img.read()).decode("utf-8")
 
-# Setup logging
+# Setup logging for CLI only
 logging.basicConfig(level=logging.INFO, format='[%(levelname)s] %(message)s')
 
 # recording an audio from user end
@@ -47,11 +46,11 @@ def capture_microphone(output_file="recorded_input.mp3"):
         logging.error(f"Mic recording failed: {err}")
 
 # converting patient's speech/voice to text for transcription 
-def convert_speech_to_text(file_path, model="whisper-large-v3"):
+def convert_speech_to_text(file_path):
     client = Groq(api_key=GROQ_KEY)
     with open(file_path, "rb") as audio_file:
         response = client.audio.transcriptions.create(
-            model=model,
+            model="whisper-large-v3",
             file=audio_file,
             language="en"
         )
@@ -92,8 +91,7 @@ def get_doctor_response(text_prompt, image_base64=None):
 # setting up Text-to-Speech (TTS) model with gTTS
 def speak_with_gtts(response_text, output_file="response_gtts.mp3"):
     try:
-        tts = gTTS(text=response_text, lang="en", slow=False)
-        tts.save(output_file)
+        gTTS(text=response_text, lang="en", slow=False).save(output_file)
         return output_file
     except Exception as e:
         logging.error(f"gTTS failed: {e}")
@@ -105,7 +103,7 @@ def speak_with_elevenlabs(response_text, output_file="response_elevenlabs.mp3"):
         client = ElevenLabs(api_key=ELEVEN_KEY)
         audio = client.generate(
             text=response_text,
-            voice="Aria",
+            voice="Samantha",
             output_format="mp3_22050_32",
             model="eleven_turbo_v2"
         )
