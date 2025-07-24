@@ -6,6 +6,7 @@ Designed for accessibility and user engagement, the chatbot aims to provide conc
 
 > ❗ **Note:** This is not a diagnostic tool. It is designed for **educational and demonstration purposes only**.
 
+---
 ## 🔍 Core Features
 
 - 🎤 **Voice Input**: Users can speak symptoms using a microphone.
