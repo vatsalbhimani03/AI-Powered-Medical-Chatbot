@@ -1,8 +1,8 @@
-# AI-Powered-Medical-Chatbot
+# AI Powered Medical Chatbot
 
 An interactive AI-powered medical assistant that leverages voice, and image inputs to help users understand general health concerns. 
 This tool integrates speech recognition (Speech-To-Text & Text-To-Speech), natural language processing (NLP), and computer vision to simulate basic doctor-patient interactions. 
-Designed for accessibility and user engagement, the chatbot aims to provide concise, educational responses—especially for common symptoms and visual cues like rashes or X-rays—without replacing professional care.
+Designed for accessibility and user engagement, the chatbot aims to provide concise, educational responses, especially for common symptoms and visual cues like rashes or X-rays, without replacing professional care.
 
 > ❗ **Note:** This is not a diagnostic tool. It is designed for **educational and demonstration purposes only**.
 
