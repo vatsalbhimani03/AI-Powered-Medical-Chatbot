@@ -4,17 +4,30 @@ An interactive AI-powered medical assistant that leverages voice, and image inpu
 This tool integrates speech recognition (Speech-To-Text & Text-To-Speech), natural language processing (NLP), and computer vision to simulate basic doctor-patient interactions. 
 Designed for accessibility and user engagement, the chatbot aims to provide concise, educational responses—especially for common symptoms and visual cues like rashes or X-rays—without replacing professional care.
 
+> ❗ **Note:** This is not a diagnostic tool. It is designed for **educational and demonstration purposes only**.
+
+## 🔍 Core Features
+
+- 🎤 **Voice Input**: Users can speak symptoms using a microphone.
+- 🖼️ **Image Upload**: Users can upload medical images (e.g., rashes, X-rays).
+- 💬 **AI Response**: Uses LLM to generate concise, easy-to-understand medical feedback.
+- 🔊 **Voice Output**: Responses are spoken back using realistic TTS.
+  
 ---
 ## 💡 AI-Powered Medical Chatbot – Demo Output
 
-### 🔷 By providing both Voice & Image as an Input
-![Chatbot UI](Output/With Voice and Image input.jpg)
-
-### 🔷 By providing only Voice input
-![Architecture](Output/With only Voice input.jpg)
-
-### 🔷 By providing only Image input
-![Architecture](Output/With only Image input.jpg)
+### 🔷 Voice + Image Input  
+![With Voice and Image Input](Output/With%20Voice%20and%20Image%20input.jpg)
+---
+### 🔷 Only Voice Input  
+![With only Voice Input](Output/With%20only%20Voice%20input.jpg)
+---
+### 🔷 Only Image Input  
+![With only Image Input](Output/With%20only%20Image%20input.jpg)
+---
+## 💡 AI-Powered Medical Chatbot – Architecture
+![Architecture](Output/Chatbot%20Architecture.png)
+---
 
 ## Prerequisites
 
@@ -30,6 +43,24 @@ pip3 --version        # pip 24.x.x or higher
 ```bash
 pip3 install --upgrade pip
 ```
+
+## 🔐 API Keys (Required)
+
+To run the chatbot, you must provide your own API keys:
+
+### ➤ Required APIs:
+
+- **Groq API Key**: Used for LLM-based text and image processing.
+- **ElevenLabs API Key (optional gTTS)**: Used for generating realistic voice output.
+
+### ➤ Setup `.env` File
+
+Create a `.env` file in the root directory and add your keys like this:
+
+```env
+GROQ_API_KEY=your_groq_api_key_here
+ELEVENLABS_API_KEY=your_elevenlabs_api_key_here
+
 
 ---
 
@@ -99,6 +130,17 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+---
+## Final command to run the file
+#### Activate the environment (exit & rerun every time after changing .env file)
+```bash
+pipenv shell
+```
+#### Run both files
+```bash
+python medical_chatbot_backend.py
+python medical_chatbot_frontend.py
+```
 ---
 
 ## 📦 Manual Package Installation 
