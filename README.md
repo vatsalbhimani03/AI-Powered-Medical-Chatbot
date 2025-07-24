@@ -60,7 +60,7 @@ Create a `.env` file in the root directory and add your keys like this:
 ```env
 GROQ_API_KEY=your_groq_api_key_here
 ELEVENLABS_API_KEY=your_elevenlabs_api_key_here
-
+```
 
 ---
 
