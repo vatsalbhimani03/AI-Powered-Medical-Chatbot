@@ -144,7 +144,7 @@ python medical_chatbot_frontend.py
 ```
 ---
 
-## 📦 Manual Package Installation 
+## 📦 Manual Package Installation (if needed, otherwise use pipfile)
 
 ```bash
 pipenv install gradio
@@ -160,6 +160,19 @@ pipenv install ffmpeg
 pipenv install portaudio
 
 pipenv install groq
+```
+
+## 🔁 Resetting Pipfile Lock (if you run into issues)
+
+### If you're facing dependency issues or want a fresh install, follow these steps:
+
+#### 1. Remove the existing lock file: (Stay in activated environment)
+```bash
+rm pipfile.lock
+```
+#### 2. Reinstall 
+```bash
+pipenv install
 ```
 
 ---
