@@ -18,7 +18,7 @@ Designed for accessibility and user engagement, the chatbot aims to provide conc
 ## 💡 AI-Powered Medical Chatbot – Demo Output
 
 ### 🎥 Video Demo Output 
-![Demo Video](Output/Demo%20output%20video.mov)
+![Demo Video](Output/Demo output video.mov)
 
 ### 🔷 Voice + Image Input  
 ![With Voice and Image Input](Output/With%20Voice%20and%20Image%20input.jpg)
